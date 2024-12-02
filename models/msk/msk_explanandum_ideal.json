@@ -1,0 +1,48 @@
+{
+    "target": {
+        "id": "spaceoccupyinglesioncancer",
+        "state_of_interest": "Yes"
+    },
+    "intermediate": {
+        "causal": [],
+        "explainaway": [
+            "caudaequina",
+            "infectivecondition",
+            "fracture",
+            "inflammatorycondition",
+            "nerveroot",
+            "depression",
+            "stress",
+            "anxietyfearjudgement"
+        ]
+    },
+    "evidence": [
+        "cancerstatus",
+        "trauma",
+        "infectionrisk",
+        "systemicillness",
+        "immunosuppression",
+        "age",
+        "steroids",
+        "bonehealth",
+        "locusofcontrol",
+        "medicationuse",
+        "bladderdisturbance",
+        "boweldisturbance",
+        "saddleanaesthesia",
+        "sexualdysfunction",
+        "gaitdisturbance",
+        "bilateralneurologicalsymptoms",
+        "weaknessspecific",
+        "umnlmnsigns",
+        "decreasedcoordination",
+        "weightloss",
+        "inflammatorysigns",
+        "resultsofinvestigations",
+        "severitypain",
+        "weaknessglobal",
+        "responsetomedication",
+        "sleepdisturbance",
+        "anxiety"
+    ]
+}

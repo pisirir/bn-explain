@@ -1,0 +1,41 @@
+{
+    "target": {
+        "id": "TIC",
+        "state_of_interest": "Yes"
+    },
+    "intermediate": {
+        "causal": [
+            "TissueInjury",
+            "Perfusion"
+        ],
+        "explainaway": []
+    },
+    "evidence": [
+        "Energy",
+        "MOI",
+        "Chest_Bleeding_Assessment",
+        "Abdo_Bleeding_Assessment",
+        "Pelvic_Fracture",
+        "Rib_Fracture",
+        "Skull_Fracture",
+        "Flail_Chest",
+        "LL_Fracture",
+        "UL_Fracture",
+        "LL_Amputation",
+        "UL_Amputation",
+        "LL_Soft_Tissue",
+        "UL_Soft_Tissue",
+        "LL_Vascular",
+        "UL_Vascular",
+        "Neck_Vascular",
+        "HR",
+        "GCS",
+        "SBP",
+        "Temperature",
+        "Lactate",
+        "BE",
+        "ph"
+    ]
+}
+
+

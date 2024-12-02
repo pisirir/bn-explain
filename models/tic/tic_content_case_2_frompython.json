@@ -1,0 +1,108 @@
+{
+    "target": {
+        "id": "Coagulopathy",
+        "states": [
+            "No",
+            "Yes"
+        ],
+        "state_of_interest": "Yes",
+        "probabilities": {
+            "no_obs": [
+                0.881041007193108,
+                0.118958992806892
+            ],
+            "all_obs": [
+                0.145833344650556,
+                0.854166655349443
+            ]
+        }
+    },
+    "intermediate": [
+        {
+            "id": "Tissue_Injury_Burden",
+            "probabilities": {
+                "no_obs": [
+                    0.537193745662482,
+                    0.253574545671874,
+                    0.102219655501042,
+                    0.107012053164602
+                ],
+                "all_obs": [
+                    0.0058677920435379,
+                    0.134687207159876,
+                    0.217130752319506,
+                    0.642314248477081
+                ]
+            }
+        },
+        {
+            "id": "Perfusion",
+            "probabilities": {
+                "no_obs": [
+                    0.803387832605288,
+                    0.0975640222467973,
+                    0.099048145147915
+                ],
+                "all_obs": [
+                    3.71211659935149e-05,
+                    0.033007251955453,
+                    0.966955626878554
+                ]
+            }
+        }
+    ],
+    "evidence": {
+        "consistent": [
+            "MOI",
+            "Chest_Bleeding_Assessment",
+            "Abdo_Bleeding_Assessment",
+            "Damaged_UL_Artery",
+            "Temperature",
+            "LB_Fracture_UL",
+            "SBP_Disc"
+        ],
+        "conflicting": null
+    },
+    "observations": [
+        {
+            "id": "Energy",
+            "value": "High"
+        },
+        {
+            "id": "MOI",
+            "value": "Explosion"
+        },
+        {
+            "id": "Chest_Bleeding_Assessment",
+            "value": "Positive"
+        },
+        {
+            "id": "Abdo_Bleeding_Assessment",
+            "value": "Positive"
+        },
+        {
+            "id": "LB_Fracture_UL",
+            "value": "Yes"
+        },
+        {
+            "id": "Damaged_UL_Artery",
+            "value": "Yes"
+        },
+        {
+            "id": "Damaged_Neck_Artery",
+            "value": "Yes"
+        },
+        {
+            "id": "SBP_Disc",
+            "value": 70
+        },
+        {
+            "id": "HR_Disc",
+            "value": 120
+        },
+        {
+            "id": "Temperature",
+            "value": "<34"
+        }
+    ]
+}

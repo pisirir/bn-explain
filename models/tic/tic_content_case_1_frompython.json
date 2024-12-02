@@ -1,0 +1,112 @@
+{
+    "target": {
+        "id": "Coagulopathy",
+        "states": [
+            "No",
+            "Yes"
+        ],
+        "state_of_interest": "Yes",
+        "probabilities": {
+            "no_obs": [
+                0.881041007193108,
+                0.118958992806892
+            ],
+            "all_obs": [
+                0.962639403524815,
+                0.0373605964751848
+            ]
+        }
+    },
+    "intermediate": [
+        {
+            "id": "Tissue_Injury_Burden",
+            "probabilities": {
+                "no_obs": [
+                    0.537193745662482,
+                    0.253574545671874,
+                    0.102219655501042,
+                    0.107012053164602
+                ],
+                "all_obs": [
+                    0.745700885483496,
+                    0.227375989922195,
+                    0.025393575980315,
+                    0.00152954861399445
+                ]
+            }
+        },
+        {
+            "id": "Perfusion",
+            "probabilities": {
+                "no_obs": [
+                    0.803387832605288,
+                    0.0975640222467973,
+                    0.099048145147915
+                ],
+                "all_obs": [
+                    0.989902469895776,
+                    0.00606491963825201,
+                    0.00403261046597146
+                ]
+            }
+        }
+    ],
+    "evidence": {
+        "consistent": [
+            "Energy",
+            "MOI",
+            "HR_Disc",
+            "GCS_Disc"
+        ],
+        "conflicting": [
+            "LB_Fracture_LL",
+            "Soft_Tissue_Injury_LL"
+        ]
+    },
+    "observations": [
+        {
+            "id": "Energy",
+            "value": "Low"
+        },
+        {
+            "id": "MOI",
+            "value": "Blunt"
+        },
+        {
+            "id": "Soft_Tissue_Injury_LL",
+            "value": "Mild"
+        },
+        {
+            "id": "LB_Fracture_LL",
+            "value": "Yes"
+        },
+        {
+            "id": "Damaged_LL_Artery",
+            "value": "No"
+        },
+        {
+            "id": "Pelvic_Fracture",
+            "value": "No"
+        },
+        {
+            "id": "Chest_Bleeding_Assessment",
+            "value": "Negative"
+        },
+        {
+            "id": "Abdo_Bleeding_Assessment",
+            "value": "Negative"
+        },
+        {
+            "id": "SBP_Disc",
+            "value": 119
+        },
+        {
+            "id": "HR_Disc",
+            "value": 90
+        },
+        {
+            "id": "GCS_Disc",
+            "value": 15
+        }
+    ]
+}

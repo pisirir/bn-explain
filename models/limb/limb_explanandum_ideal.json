@@ -1,0 +1,27 @@
+{
+    "target": {
+        "id": "Limb_Fail",
+        "state_of_interest": "Failure"
+    },
+    "intermediate": {
+        "causal": [
+            "ST_Damage",
+            "Blood_Supply"
+        ],
+        "explainaway": []
+    },
+    "evidence": [
+        "Shock",
+        "ST",
+        "Isch_Degree",
+        "Isch_Time",
+        "Assoc_Frac",
+        "Mult",
+        "Repair",
+        "Level",
+        "MOI",
+        "CS"
+    ]
+}
+
+

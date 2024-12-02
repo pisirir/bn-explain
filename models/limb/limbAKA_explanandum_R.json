@@ -1,0 +1,24 @@
+{
+	"id" : "LIMBAKAExplanationFramework",
+	"BN" : "LimbAKABN",
+	"categoryList" : [
+		"Evidence",
+		"Evidence",
+		"Evidence",
+		"Evidence",
+		"None",
+		"Intermediate",
+		"Evidence",
+		"None",
+		"Evidence",
+		"Evidence",
+		"Evidence",
+		"None",
+		"Intermediate",
+		"Target",
+		"Evidence",
+		"Evidence",
+		"Evidence"  
+	],
+	"stateOfInt" : "Failure"
+}

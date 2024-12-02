@@ -1,0 +1,82 @@
+source('BNExplain.R')
+
+TICNoUncert <- createDiscExpBN(modelFile = "../models/tic/TICMIL_Disc_No_Uncert.cmpx",
+                               framFile = "../models/tic/TICMIL_Disc_No_Uncert_explanandum_R.json")
+
+case_one <- c(Energy = "Low",
+              MOI = "Blunt",
+              Soft_Tissue_Injury_LL = "Mild",
+              LB_Fracture_LL = "Yes",
+              Damaged_LL_Artery = "No",
+              Pelvic_Fracture = "No",
+              Chest_Bleeding_Assessment = "Negative",
+              Abdo_Bleeding_Assessment = "Negative",
+              SBP_Disc = "115.59314285714285 - 121.45942857142856",
+              HR_Disc = "88.01666666666667 - 94.25818181818181",
+              GCS_Disc = "2.3547540983606154 - 15.285245901639314")
+
+case_two <- c(Energy = "High",##
+                                MOI = "Explosion",##
+                                Damaged_Neck_Artery = "Yes",
+                                LB_Fracture_UL = "Yes",##
+                                Damaged_UL_Artery = "Yes",#
+                                Chest_Bleeding_Assessment = "Positive",##
+                                Abdo_Bleeding_Assessment = "Positive",##
+                                SBP_Disc = "68.66285714285713 - 74.52914285714284",##
+                                HR_Disc = "119.22424242424242 - 125.46575757575756",
+                                Temperature = "<34")
+
+generateAbstractExplanation(TICNoUncert, case_one, "test.json")
+generateAbstractExplanation(TICNoUncert, case_two, "test2.json")
+
+TICNoUncert$bayesnetwork$modelVariables$MOI$varStates
+
+survbn <- from_static_disc_cmpx('../models/surv/Survival_Discrete_v2.cmpx')
+
+for (vr in survbn$modelVariables){
+  cat(vr$varID, 'has the states:\t')
+  for (st in vr$varStates){
+    cat(paste0('\"',st, '\", '))
+  }
+  cat('\n')
+}
+
+for (vr in survbn$modelVariables){
+  cat(vr$varID,'\n')
+}
+
+
+survBN <- createDiscExpBN(modelFile = "../models/surv/Survival_Discrete_v2.cmpx",
+                               framFile = "../models/surv/surv_explanandum_R_for_tic.json")
+
+surv_tic_case <- c(aaa_Energy = "Low",
+                   bbb_MOI = "Blunt",
+                   iii_Soft_Tissue_Injury_LL = "Mild",
+                   hhh_LB_Fracture_LL = "Yes",
+                   qqq_Damaged_LL_Artery = "No",
+                   kkk_Pelvic_Fracture = "No",
+                   lll_chest_bl = "Negative",
+                   mmm_abdo_bl = "Negative",
+                   ttt_SBP = "115.59314285714285 - 121.45942857142856",
+                   sss_HR = "88.01666666666667 - 94.25818181818181",
+                   rrr_GCS = "2.3547540983606154 - 15.285245901639314")
+
+surv_tic_case <- c(aaa_Energy = "Low",
+                   bbb_MOI = "Blunt",
+                   iii_Soft_Tissue_Injury_LL = "Mild",
+                   hhh_LB_Fracture_LL = "Yes",
+                   qqq_Damaged_LL_Artery = "No",
+                   kkk_Pelvic_Fracture = "No",
+                   lll_chest_bl = "Negative",
+                   mmm_abdo_bl = "Negative",
+                   ttt_SBP = 119,
+                   sss_HR = 90,
+                   rrr_GCS = 15)
+
+generateAbstractExplanation(survBN, surv_tic_case, "surv-tic-test.json")
+
+
+survBN$bayesnetwork$modelVariables$bbb_MOI$varStates
+
+
+citation('gRain')
