@@ -1,0 +1,22 @@
+{
+    "target": {
+        "id": "Result",
+        "state_of_interest": "Pass"
+    },
+    "intermediate": {
+        "causal": [
+            "Dilligence",
+            "Aptitude"
+        ],
+        "explainaway": []
+    },
+    "evidence": [
+        "PastGrades",
+        "Marks",
+        "Attendance",
+        "Submission",
+        "Prerequisites"
+    ]
+}
+
+

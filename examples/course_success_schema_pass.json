@@ -1,0 +1,169 @@
+{
+    "subject_name": "this student",
+    "target": {
+        "id": "Result",
+        "display_name": "passing the course",
+        "states": [
+            "Fail",
+            "Pass"
+        ],
+        "state_display_name": [
+            "no",
+            "yes"
+        ],
+        "categories": [
+            {
+                "type": "probability",
+                "levels": [
+                    "very low probability",
+                    "low probability",
+                    "medium probability",
+                    "high probability",
+                    "very high probability"
+                ],
+                "thresholds": [
+                    0.05,
+                    0.3,
+                    0.55,
+                    0.8,
+                    1
+                ]
+            }
+        ]
+    },
+    "evidence": [
+        {
+            "id": "PastGrades",
+            "display_name": "past grades",
+            "states": [
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "state_display_name": [
+                "low",
+                "medium",
+                "high"
+            ]
+        },
+        {
+            "id": "Mark",
+            "display_name": "coursework mark",
+            "states": [
+                "Low",
+                "High"
+            ],
+            "state_display_name": [
+                "low",
+                "high"
+            ]
+        },
+        {
+            "id": "Attendance",
+            "display_name": "attendance",
+            "states": [
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "state_display_name": [
+                "low",
+                "medium",
+                "high"
+            ]
+        },        
+        {
+            "id": "Submission",
+            "display_name": "coursework submissions",
+            "states": [
+                "LateSubmit",
+                "OnTime"
+            ],
+            "state_display_name": [
+                "late",
+                "timely"
+            ]
+        },
+        {
+            "id": "Prerequisites",
+            "display_name": "prerequisite modules",
+            "states": [
+                "Missing",
+                "Completed"
+            ],
+            "state_display_name": [
+                "missing",
+                "completed"
+            ]
+        }
+    ],
+    "numerical_variables": [],
+    "intermediate": [
+        {
+            "id": "Diligence",
+            "display_name": "diligence",
+            "states": [
+                "No",
+                "Yes"
+            ],
+            "state_display_name": [
+                "no",
+                "yes"
+            ],
+            "state_of_interest" : "Yes",
+            "type" : "causal",
+            "categories": [
+                {
+                    "type": "probability",
+                    "levels": [
+                        "very low probability",
+                        "low probability",
+                        "medium probability",
+                        "high probability",
+                        "very high probability"
+                    ],
+                    "thresholds": [
+                        0.05,
+                        0.3,
+                        0.55,
+                        0.8,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "Aptitude",
+            "display_name": "aptitude",
+            "states": [
+                "No",
+                "Yes"
+            ],
+            "state_display_name": [
+                "no",
+                "yes"
+            ],
+            "state_of_interest" : "Yes",
+            "type" : "causal",
+            "categories": [
+                {
+                    "type": "probability",
+                    "levels": [
+                        "very low probability",
+                        "low probability",
+                        "medium probability",
+                        "high probability",
+                        "very high probability"
+                    ],
+                    "thresholds": [
+                        0.05,
+                        0.3,
+                        0.55,
+                        0.8,
+                        1
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -163,7 +163,7 @@ def realise_second(nlgFactory, p_content, p_schema, intermediate_type = None, in
         # sentence: 'alternative causes of state of SUBJECT_NAME are INT1_DISPLAY_NAME and INT2_DISPLAY_NAME'
         # example: 'alternative causes of state of this patient are infective condition and fracture'
 
-        exp_sub = 'alterrnative causes of state of ' + p_schema['subject_name']
+        exp_sub = 'alternative causes of state of ' + p_schema['subject_name']
         exp_sub_n = nlgFactory.createNounPhrase(exp_sub)
         exp_sub_n.setFeature(Feature.NUMBER, NumberAgreement.PLURAL)
 
